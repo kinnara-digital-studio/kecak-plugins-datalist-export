@@ -1,0 +1,45 @@
+[
+    {
+        "title": "Selection Datalist Excel Export Configuration",
+        "properties": [
+            {
+                "name": "label",
+                "label": "Button Label",
+                "type": "textfield",
+                "value": "Export Selected to Excel",
+                "required": "true"
+            },
+            {
+                "name": "filename",
+                "label": "File Name",
+                "type": "textfield",
+                "value": "export.xlsx",
+                "description": "Output Excel filename (.xlsx)"
+            },
+            {
+                "name": "sheetName",
+                "label": "Sheet Name",
+                "type": "textfield",
+                "value": "Sheet1"
+            },
+            {
+                "name": "includeAllWhenNoneSelected",
+                "label": "Export All If None Selected?",
+                "type": "checkbox",
+                "value": "false",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": ""
+                    }
+                ]
+            },
+            {
+                "name": "confirmation",
+                "label": "Confirmation Message",
+                "type": "textfield",
+                "value": ""
+            }
+        ]
+    }
+]
