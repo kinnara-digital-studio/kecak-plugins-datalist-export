@@ -10,6 +10,7 @@ import org.joget.commons.util.LogUtil;
 import org.joget.commons.util.SecurityUtil;
 import org.joget.commons.util.StringUtil;
 import org.joget.commons.util.TimeZoneUtil;
+import org.joget.plugin.base.PluginManager;
 import org.joget.workflow.util.WorkflowUtil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -408,6 +409,8 @@ public class SelectionDatalistExcelExport extends DataListActionDefault {
 
     @Override
     public String getVersion() {
-        return "1.0.0";
+        PluginManager pluginManager = (PluginManager) AppUtil.getApplicationContext().getBean("pluginManager");
+        ResourceBundle resourceBundle = pluginManager.getPluginMessageBundle(getClassName(), "/messages/BuildNumber");
+        return resourceBundle.getString("buildNumber");
     }
 }
